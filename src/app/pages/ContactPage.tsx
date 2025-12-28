@@ -11,11 +11,61 @@ export function ContactPage() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your inquiry. We will contact you within 24 hours.');
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    try {
+      // Detectar si estamos en WordPress
+      const isWordPress = typeof (window as any).structainervData !== 'undefined';
+
+      if (isWordPress) {
+        // Usar el endpoint de WordPress
+        const response = await fetch((window as any).structainervData.restUrl + 'contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-WP-Nonce': (window as any).structainervData.nonce
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          setSubmitMessage({ type: 'success', text: data.message });
+          setFormData({
+            name: '',
+            company: '',
+            email: '',
+            phone: '',
+            projectType: '',
+            message: ''
+          });
+        } else {
+          setSubmitMessage({ type: 'error', text: data.message });
+        }
+      } else {
+        // Modo de desarrollo - solo mostrar en consola
+        console.log('Form submitted:', formData);
+        setSubmitMessage({
+          type: 'success',
+          text: 'Thank you for your inquiry. We will contact you within 24 hours.'
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitMessage({
+        type: 'error',
+        text: 'Hubo un error al enviar el formulario. Por favor, intenta nuevamente.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -44,6 +94,18 @@ export function ContactPage() {
             {/* Contact Form */}
             <div>
               <h2 className="mb-8">Send Us an Inquiry</h2>
+
+              {/* Mensaje de éxito/error */}
+              {submitMessage && (
+                <div className={`mb-6 p-4 border ${
+                  submitMessage.type === 'success'
+                    ? 'bg-green-50 border-green-500 text-green-800'
+                    : 'bg-red-50 border-red-500 text-red-800'
+                }`}>
+                  {submitMessage.text}
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block mb-2">
@@ -144,9 +206,10 @@ export function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
                 >
-                  Submit Inquiry
+                  {isSubmitting ? 'Enviando...' : 'Submit Inquiry'}
                 </button>
               </form>
             </div>

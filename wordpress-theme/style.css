@@ -1,0 +1,25 @@
+/*
+Theme Name: Structainerv Corporate
+Theme URI: https://structainer.net
+Author: Structainerv
+Author URI: https://structainer.net
+Description: Tema corporativo moderno construido con React y Vite. Diseñado específicamente para Structainerv Group.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: structainerv-corporate
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+Este tema es una Single Page Application (SPA) construida con React.
+Los estilos principales se cargan desde assets/css/index.css
+*/
+
+/* Reset básico para WordPress */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wpadminbar {
+    position: fixed !important;
+}
