@@ -8,32 +8,32 @@ export function Footer() {
           <div>
             <h3 className="mb-4">Structainer V Group</h3>
             <p className="text-gray-400">
-              Specialized in modular construction, prefabricated systems, and turnkey industrial projects.
+              Structainer V Group es un holding mexicano especializado en construcción modular prefabricada, ingeniería y soluciones industriales integrales.
             </p>
           </div>
           
           <div>
-            <h3 className="mb-4">Contact</h3>
+            <h3 className="mb-4">Contacto</h3>
             <div className="space-y-2 text-gray-400">
-              <p>Phone: +52 (123) 456-7890</p>
-              <p>Email: info@structainerv.com</p>
-              <p>Mexico City, Mexico</p>
+              <p>Phone: 442 722 0385</p>
+              <p>Email: ventas@structainer.com.mx</p>
+              <p>Terra Business Park Nave 29C</p>
             </div>
           </div>
           
           <div>
-            <h3 className="mb-4">Services</h3>
+            <h3 className="mb-4">Servicios</h3>
             <div className="space-y-2 text-gray-400">
-              <p>Modular Construction</p>
-              <p>Industrial Engineering</p>
-              <p>Prefabricated Systems</p>
-              <p>Turnkey Projects</p>
+              <p>Planeación y Gestoría Normativa</p>
+              <p>Ingeniería y Proyecto Ejecutivo</p>
+              <p>Construcción Tradicional</p>
+              <p>Construcción Modular y Prefabricada</p>
             </div>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {currentYear} Structainer V Group. All rights reserved.</p>
+          <p>&copy; {currentYear} Grupo Structainer V. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

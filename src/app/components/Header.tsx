@@ -25,7 +25,7 @@ export function Header() {
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Home
+              Inicio
             </Link>
             <Link
               to="/about"
@@ -35,7 +35,7 @@ export function Header() {
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              About
+              Nosotros
             </Link>
             <Link
               to="/services"
@@ -45,7 +45,7 @@ export function Header() {
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Services
+              Servicios
             </Link>
             <Link
               to="/contact"
@@ -55,7 +55,7 @@ export function Header() {
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Contact
+              Contacto
             </Link>
           </nav>
         </div>

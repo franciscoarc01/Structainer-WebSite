@@ -5,86 +5,86 @@ export function HomePage() {
   const services = [
     {
       icon: Building2,
-      title: 'Modular Construction',
-      description: 'Scalable modular units designed for rapid deployment and long-term durability.'
+      title: 'Construcción Modular Prefabricada',
+      description: 'Diseño, fabricación e instalación de módulos prefabricados y estructuras modulares para oficinas, campamentos, naves industriales, casetas, showrooms y soluciones móviles.'
     },
     {
       icon: Cog,
-      title: 'Industrial Engineering',
-      description: 'Complete engineering solutions for complex industrial infrastructure projects.'
+      title: 'Ingeniería Industrial Integral',
+      description: 'Desarrollo completo de ingenierías estructural, eléctrica, hidrosanitaria, HVAC, sistemas contra incendio y seguridad, integradas a proyecto ejecutivo, presupuestos y cronogramas.'
     },
     {
       icon: Warehouse,
-      title: 'Prefabricated Systems',
-      description: 'Factory-built components ensuring quality control and precision manufacturing.'
+      title: 'Sistemas Prefabricados',
+      description: 'Componentes construidos en fábrica que garantizan control de calidad y fabricación de precisión.'
     },
     {
       icon: FileCheck,
-      title: 'Turnkey Projects',
-      description: 'End-to-end project delivery from planning to final commissioning.'
+      title: 'Proyectos Llave en Mano',
+      description: 'Entrega de proyectos de principio a fin, desde la planificación hasta la puesta en marcha final.'
     },
     {
       icon: TrendingUp,
-      title: 'Project Optimization',
-      description: 'Efficiency-focused solutions reducing time and cost while maximizing quality.'
+      title: 'Optimización de Proyectos',
+      description: 'Soluciones enfocadas en eficiencia que reducen tiempo y costos mientras maximizan la calidad.'
     },
     {
       icon: Shield,
-      title: 'Compliance & Safety',
-      description: 'Full regulatory compliance and safety standards across all project phases.'
+      title: 'Cumplimiento y Seguridad',
+      description: 'Cumplimiento normativo total y estándares de seguridad en todas las fases del proyecto.'
     }
   ];
 
   const valueProps = [
-    { title: 'Turnkey Approach', description: 'Complete project delivery from concept to completion' },
-    { title: 'Speed', description: 'Accelerated timelines through modular construction methods' },
-    { title: 'Quality', description: 'Factory-controlled manufacturing ensuring consistent standards' },
-    { title: 'Compliance', description: 'Full adherence to industry regulations and safety protocols' },
-    { title: 'Scalability', description: 'Flexible solutions that grow with your business needs' }
+    { title: 'Enfoque Llave en Mano', description: 'Entrega completa de proyectos desde el concepto hasta la finalización' },
+    { title: 'Velocidad', description: 'Cronogramas acelerados mediante métodos de construcción modular' },
+    { title: 'Calidad', description: 'Fabricación controlada en fábrica garantizando estándares consistentes' },
+    { title: 'Cumplimiento', description: 'Adhesión total a regulaciones de la industria y protocolos de seguridad' },
+    { title: 'Escalabilidad', description: 'Soluciones flexibles que crecen con las necesidades de su negocio' }
   ];
 
   const processSteps = [
     {
       number: '01',
-      title: 'Planning',
-      description: 'Comprehensive project analysis and strategic planning phase.'
+      title: 'Planificación',
+      description: 'Análisis integral del proyecto y fase de planificación estratégica.'
     },
     {
       number: '02',
-      title: 'Engineering',
-      description: 'Detailed design and engineering documentation development.'
+      title: 'Ingeniería',
+      description: 'Desarrollo de diseño detallado y documentación de ingeniería.'
     },
     {
       number: '03',
-      title: 'Fabrication',
-      description: 'Precision manufacturing in controlled factory environment.'
+      title: 'Fabricación',
+      description: 'Manufactura de precisión en ambiente de fábrica controlado.'
     },
     {
       number: '04',
-      title: 'Installation',
-      description: 'On-site assembly and final system commissioning.'
+      title: 'Instalación',
+      description: 'Ensamblaje en sitio y puesta en marcha del sistema final.'
     }
   ];
 
   const sectors = [
     {
       title: 'Industrial',
-      description: 'Manufacturing facilities, production plants, and industrial complexes.',
+      description: 'Instalaciones de manufactura, plantas de producción y complejos industriales.',
       image: 'https://images.unsplash.com/photo-1623428454598-1bfe414bac03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwc3RlZWwlMjBjb25zdHJ1Y3Rpb258ZW58MXx8fHwxNzY2Nzk0Njg5fDA&ixlib=rb-4.1.0&q=80&w=1080'
     },
     {
-      title: 'Corporate',
-      description: 'Office buildings, corporate campuses, and commercial spaces.',
+      title: 'Corporativo',
+      description: 'Edificios de oficinas, campus corporativos y espacios comerciales.',
       image: 'https://images.unsplash.com/photo-1704423846283-f92ff6badea3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjY3MDU3MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080'
     },
     {
-      title: 'Logistics',
-      description: 'Distribution centers, warehousing solutions, and logistics hubs.',
+      title: 'Logística',
+      description: 'Centros de distribución, soluciones de almacenamiento y centros logísticos.',
       image: 'https://images.unsplash.com/photo-1766021736631-d2f15082aa59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb2dpc3RpY3MlMjB3YXJlaG91c2UlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjY3OTQ2OTB8MA&ixlib=rb-4.1.0&q=80&w=1080'
     },
     {
-      title: 'Government',
-      description: 'Public infrastructure, institutional facilities, and government projects.',
+      title: 'Gobierno',
+      description: 'Infraestructura pública, instalaciones institucionales y proyectos gubernamentales.',
       image: 'https://images.unsplash.com/photo-1731847999830-6f71b78d720e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwd2FyZWhvdXNlJTIwZmFjaWxpdHl8ZW58MXx8fHwxNzY2Nzk0NjkwfDA&ixlib=rb-4.1.0&q=80&w=1080'
     }
   ];
@@ -103,16 +103,16 @@ export function HomePage() {
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-3xl">
-            <h1 className="mb-6">Engineering Precision in Modular Construction</h1>
+            <h1 className="mb-6">Precisión en Ingeniería y Construcción Modular</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Delivering turnkey industrial projects with advanced prefabricated systems 
-              for corporate, logistics, and government sectors across Mexico.
+              Entregamos proyectos industriales llave en mano con sistemas prefabricados avanzados
+              para los sectores corporativo, logístico y gubernamental en todo México.
             </p>
             <Link
               to="/contact"
               className="inline-block bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 transition-colors"
             >
-              Get a Quote
+              Solicitar Cotización
             </Link>
           </div>
         </div>
@@ -122,9 +122,9 @@ export function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="mb-4">Our Services</h2>
+            <h2 className="mb-4">SERVICIOS</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Comprehensive solutions for large-scale industrial and commercial construction projects.
+              Soluciones integrales para proyectos de construcción industrial y comercial a gran escala.
             </p>
           </div>
           
@@ -144,9 +144,9 @@ export function HomePage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="mb-4">Why Choose Structainer V Group</h2>
+            <h2 className="mb-4">NUESTRO DIFERENCIAL</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our turnkey approach delivers exceptional value through precision engineering and modular construction.
+              Nuestro enfoque llave en mano ofrece un valor excepcional a través de ingeniería de precisión y construcción modular.
             </p>
           </div>
           
@@ -165,9 +165,9 @@ export function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="mb-4">Our Process</h2>
+            <h2 className="mb-4">NUESTRO PROCESO</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A systematic approach ensuring project success from initial planning to final delivery.
+            Un enfoque estructurado que garantiza eficiencia, control y cumplimiento en cada etapa del proyecto.
             </p>
           </div>
           
@@ -191,9 +191,9 @@ export function HomePage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="mb-4">Sectors We Serve</h2>
+            <h2 className="mb-4">SECTORES</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Specialized expertise across industrial, corporate, logistics, and government sectors.
+              Construcción modular prefabricada para industria, corporativos, logística y sector público.
             </p>
           </div>
           
@@ -220,15 +220,15 @@ export function HomePage() {
       {/* Final CTA */}
       <section className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="mb-6">Ready to Start Your Project?</h2>
+          <h2 className="mb-6">¿Listo para iniciar tu proyecto?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your industrial construction needs and receive a detailed project proposal.
+            Diseñamos y construimos soluciones modulares prefabricadas, seguras, escalables y listas para operar.
           </p>
           <Link
             to="/contact"
             className="inline-block bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 transition-colors"
           >
-            Get in Touch
+            Contáctanos
           </Link>
         </div>
       </section>

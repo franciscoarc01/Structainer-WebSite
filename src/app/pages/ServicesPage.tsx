@@ -4,74 +4,74 @@ export function ServicesPage() {
   const services = [
     {
       icon: Building2,
-      title: 'Modular Construction',
-      description: 'Factory-built modular units designed for rapid on-site assembly. Our modular approach reduces construction time by up to 50% while maintaining superior quality control through controlled manufacturing environments.',
+      title: 'Construcción Modular',
+      description: 'Unidades modulares construidas en fábrica diseñadas para ensamblaje rápido en sitio. Nuestro enfoque modular reduce el tiempo de construcción hasta en un 50% mientras mantiene un control de calidad superior a través de ambientes de manufactura controlados.',
       features: [
-        'Pre-engineered structural systems',
-        'Climate-controlled manufacturing',
-        'Reduced site disruption',
-        'Scalable configurations',
-        'Quality-controlled production'
+        'Sistemas estructurales pre-ingenierizados',
+        'Manufactura con clima controlado',
+        'Reducción de disrupciones en sitio',
+        'Configuraciones escalables',
+        'Producción con control de calidad'
       ]
     },
     {
       icon: Cog,
-      title: 'Industrial Engineering',
-      description: 'Comprehensive engineering services for industrial facilities including structural design, systems integration, and technical documentation. Our team handles complex multi-discipline projects with precision.',
+      title: 'Ingeniería Industrial',
+      description: 'Servicios integrales de ingeniería para instalaciones industriales incluyendo diseño estructural, integración de sistemas y documentación técnica. Nuestro equipo maneja proyectos complejos multidisciplinarios con precisión.',
       features: [
-        'Structural engineering and analysis',
-        'MEP systems design',
-        'Process equipment integration',
-        'Technical specifications',
-        'Construction documentation'
+        'Ingeniería y análisis estructural',
+        'Diseño de sistemas MEP',
+        'Integración de equipos de proceso',
+        'Especificaciones técnicas',
+        'Documentación de construcción'
       ]
     },
     {
       icon: Warehouse,
-      title: 'Prefabricated Systems',
-      description: 'Advanced prefabrication techniques for building components, mechanical systems, and structural elements. Factory production ensures consistency and accelerates project timelines.',
+      title: 'Sistemas Prefabricados',
+      description: 'Técnicas avanzadas de prefabricación para componentes de construcción, sistemas mecánicos y elementos estructurales. La producción en fábrica garantiza consistencia y acelera los cronogramas del proyecto.',
       features: [
-        'Prefabricated wall panels',
-        'Modular mechanical rooms',
-        'Pre-assembled structural frames',
-        'Integrated building systems',
-        'Factory testing and QC'
+        'Paneles de pared prefabricados',
+        'Salas mecánicas modulares',
+        'Marcos estructurales pre-ensamblados',
+        'Sistemas de construcción integrados',
+        'Pruebas de fábrica y control de calidad'
       ]
     },
     {
       icon: FileCheck,
-      title: 'Turnkey Projects',
-      description: 'Complete project delivery from initial concept through final commissioning. Single-point responsibility for design, engineering, fabrication, and installation.',
+      title: 'Proyectos Llave en Mano',
+      description: 'Entrega completa del proyecto desde el concepto inicial hasta la puesta en marcha final. Responsabilidad de punto único para diseño, ingeniería, fabricación e instalación.',
       features: [
-        'Complete project management',
-        'Design-build approach',
-        'Procurement and logistics',
-        'Installation and commissioning',
-        'Post-completion support'
+        'Gestión completa de proyectos',
+        'Enfoque de diseño-construcción',
+        'Adquisiciones y logística',
+        'Instalación y puesta en marcha',
+        'Soporte post-finalización'
       ]
     },
     {
       icon: Wrench,
-      title: 'Site Installation',
-      description: 'Expert installation teams managing on-site assembly, integration, and commissioning. Coordinated logistics ensure efficient deployment of prefabricated components.',
+      title: 'Instalación en Sitio',
+      description: 'Equipos de instalación expertos gestionando ensamblaje en sitio, integración y puesta en marcha. La logística coordinada asegura el despliegue eficiente de componentes prefabricados.',
       features: [
-        'Experienced installation crews',
-        'Safety-first protocols',
-        'Minimal site disruption',
-        'System integration',
-        'Final commissioning'
+        'Cuadrillas de instalación experimentadas',
+        'Protocolos de seguridad primero',
+        'Mínima disrupción en sitio',
+        'Integración de sistemas',
+        'Puesta en marcha final'
       ]
     },
     {
       icon: ChartBar,
-      title: 'Project Management',
-      description: 'Dedicated project management ensuring on-time, on-budget delivery. Comprehensive oversight of scheduling, quality control, and stakeholder communication.',
+      title: 'Gestión de Proyectos',
+      description: 'Gestión de proyectos dedicada asegurando entrega a tiempo y dentro del presupuesto. Supervisión integral de programación, control de calidad y comunicación con stakeholders.',
       features: [
-        'Schedule management',
-        'Budget control',
-        'Quality assurance',
-        'Risk management',
-        'Client reporting'
+        'Gestión de cronograma',
+        'Control de presupuesto',
+        'Aseguramiento de calidad',
+        'Gestión de riesgos',
+        'Reportes al cliente'
       ]
     }
   ];
@@ -81,10 +81,10 @@ export function ServicesPage() {
       {/* Hero Section */}
       <section className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="mb-6">Our Services</h1>
+          <h1 className="mb-6">Nuestros Servicios</h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            Comprehensive construction and engineering solutions designed for industrial, 
-            corporate, logistics, and government sectors.
+            Soluciones integrales de construcción e ingeniería diseñadas para los sectores industrial,
+            corporativo, logístico y gubernamental.
           </p>
         </div>
       </section>
@@ -135,35 +135,35 @@ export function ServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="mb-4">Industries We Serve</h2>
+            <h2 className="mb-4">Industrias que Atendemos</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Specialized expertise across key industrial and commercial sectors.
+              Experiencia especializada en sectores industriales y comerciales clave.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white border border-gray-200 p-8">
-              <h3 className="mb-3">Industrial Manufacturing</h3>
+              <h3 className="mb-3">Manufactura Industrial</h3>
               <p className="text-gray-600">
-                Production facilities, assembly plants, and industrial complexes.
+                Instalaciones de producción, plantas de ensamblaje y complejos industriales.
               </p>
             </div>
             <div className="bg-white border border-gray-200 p-8">
-              <h3 className="mb-3">Corporate Development</h3>
+              <h3 className="mb-3">Desarrollo Corporativo</h3>
               <p className="text-gray-600">
-                Office buildings, corporate campuses, and commercial spaces.
+                Edificios de oficinas, campus corporativos y espacios comerciales.
               </p>
             </div>
             <div className="bg-white border border-gray-200 p-8">
-              <h3 className="mb-3">Logistics & Distribution</h3>
+              <h3 className="mb-3">Logística y Distribución</h3>
               <p className="text-gray-600">
-                Warehouses, distribution centers, and logistics hubs.
+                Almacenes, centros de distribución y centros logísticos.
               </p>
             </div>
             <div className="bg-white border border-gray-200 p-8">
-              <h3 className="mb-3">Government & Infrastructure</h3>
+              <h3 className="mb-3">Gobierno e Infraestructura</h3>
               <p className="text-gray-600">
-                Public facilities, institutional buildings, and infrastructure.
+                Instalaciones públicas, edificios institucionales e infraestructura.
               </p>
             </div>
           </div>
@@ -173,15 +173,15 @@ export function ServicesPage() {
       {/* CTA Section */}
       <section className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="mb-6">Need a Custom Solution?</h2>
+          <h2 className="mb-6">¿Necesitas una Solución Personalizada?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Our team can develop tailored engineering and construction solutions for your specific project requirements.
+            Nuestro equipo puede desarrollar soluciones de ingeniería y construcción a medida para los requisitos específicos de tu proyecto.
           </p>
           <a
             href="/contact"
             className="inline-block bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 transition-colors"
           >
-            Discuss Your Project
+            Discute tu Proyecto
           </a>
         </div>
       </section>
