@@ -1,2 +1,21 @@
-src/assets/.DS_Store
-src/.DS_Store
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.zip
+
+# OS files
+.DS_Store
+**/.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+
+# WordPress theme backup
+wordpress-theme/functions.php.bak
