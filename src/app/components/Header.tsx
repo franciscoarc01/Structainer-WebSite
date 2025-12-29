@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/609e0594c6db439163d815ac5d9383dac9bd059f.png';
+import logo from '../../assets/logo.png';
 
 export function Header() {
   const location = useLocation();
@@ -20,8 +20,8 @@ export function Header() {
             <Link
               to="/"
               className={`transition-colors ${
-                isActive('/') 
-                  ? 'text-gray-900' 
+                isActive('/')
+                  ? 'text-gray-900'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -30,8 +30,8 @@ export function Header() {
             <Link
               to="/about"
               className={`transition-colors ${
-                isActive('/about') 
-                  ? 'text-gray-900' 
+                isActive('/about')
+                  ? 'text-gray-900'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -40,18 +40,38 @@ export function Header() {
             <Link
               to="/services"
               className={`transition-colors ${
-                isActive('/services') 
-                  ? 'text-gray-900' 
+                isActive('/services')
+                  ? 'text-gray-900'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               Servicios
             </Link>
             <Link
+              to="/products"
+              className={`transition-colors ${
+                isActive('/products')
+                  ? 'text-gray-900'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Productos
+            </Link>
+            <Link
+              to="/projects"
+              className={`transition-colors ${
+                isActive('/projects')
+                  ? 'text-gray-900'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Proyectos
+            </Link>
+            <Link
               to="/contact"
               className={`transition-colors ${
-                isActive('/contact') 
-                  ? 'text-gray-900' 
+                isActive('/contact')
+                  ? 'text-gray-900'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
