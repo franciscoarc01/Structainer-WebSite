@@ -16,7 +16,7 @@ export function Footer() {
             <h3 className="mb-4">Contacto</h3>
             <div className="space-y-2 text-gray-400">
               <p>Phone: 442 722 0385</p>
-              <p>Email: ventas@structainer.com.mx</p>
+              <p>Email: ventas@structainer.net</p>
               <p>Terra Business Park Nave 29C</p>
             </div>
           </div>

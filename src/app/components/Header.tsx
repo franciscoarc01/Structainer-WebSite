@@ -1,6 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 
+// /Users/abrils/Documents/Github/structainer-website-react/src/assets/logo.png
+
+// /Users/abrils/Documents/Github/structainer-website-react/src/assets
 export function Header() {
   const location = useLocation();
   

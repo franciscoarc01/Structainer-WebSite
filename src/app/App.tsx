@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { HomePage } from './pages/HomePage';
-import { AboutPage } from './pages/AboutPage';
-import { ServicesPage } from './pages/ServicesPage';
-import { ProjectsPage } from './pages/ProjectsPage';
-import { ProductsPage } from './pages/ProductsPage';
-import { ContactPage } from './pages/ContactPage';
+import { HomePage } from './pages/InicioPage';
+import { AboutPage } from './pages/NosotrosPage';
+import { ServicesPage } from './pages/ServiciosPage';
+import { ProjectsPage } from './pages/ProyectosPage';
+import { ProductsPage } from './pages/ProductosPage';
+import { ContactPage } from './pages/ContactoPage';
 
 export default function App() {
   return (
