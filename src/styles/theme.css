@@ -1,48 +1,73 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --font-size: 16px;
+  /* Structainer Brand Colors */
+  --brand-blue-corporate: #04254D;
+  --brand-gold-technical: #C8A256;
+  --brand-gray-neutral: #F0F0F0;
+  --brand-blue-light: #0A3B7A;
+  --brand-gold-light: #D4B470;
+  --brand-gold-dark: #A68642;
+
+  /* Typography */
+  --font-size: 18px;
   --text-base: 1rem;
   --text-lg: 1.125rem;
   --text-xl: 1.875rem;
   --text-2xl: 3rem;
+
+  /* Theme Colors - Using Structainer Palette */
   --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
+  --foreground: var(--brand-blue-corporate);
   --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #030213;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: #030213;
-  --muted: #ececf0;
-  --muted-foreground: #717182;
-  --accent: #e9ebef;
-  --accent-foreground: #030213;
+  --card-foreground: var(--brand-blue-corporate);
+  --popover: #ffffff;
+  --popover-foreground: var(--brand-blue-corporate);
+
+  /* Primary = Azul Corporativo */
+  --primary: var(--brand-blue-corporate);
+  --primary-foreground: #ffffff;
+
+  /* Secondary = Dorado Técnico */
+  --secondary: var(--brand-gold-technical);
+  --secondary-foreground: var(--brand-blue-corporate);
+
+  /* Muted = Gris Neutro */
+  --muted: var(--brand-gray-neutral);
+  --muted-foreground: #5A5A5A;
+
+  /* Accent = Dorado Técnico para highlights */
+  --accent: var(--brand-gold-technical);
+  --accent-foreground: var(--brand-blue-corporate);
+
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
+  --border: rgba(4, 37, 77, 0.15);
   --input: transparent;
-  --input-background: #f3f3f5;
+  --input-background: var(--brand-gray-neutral);
   --switch-background: #cbced4;
   --font-weight-medium: 600;
   --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --ring: var(--brand-gold-technical);
+
+  /* Charts - Using brand colors */
+  --chart-1: var(--brand-blue-corporate);
+  --chart-2: var(--brand-gold-technical);
+  --chart-3: var(--brand-blue-light);
+  --chart-4: var(--brand-gold-light);
+  --chart-5: var(--brand-gray-neutral);
+
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #030213;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Sidebar */
+  --sidebar: var(--brand-blue-corporate);
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: var(--brand-gold-technical);
+  --sidebar-primary-foreground: var(--brand-blue-corporate);
+  --sidebar-accent: var(--brand-gold-technical);
+  --sidebar-accent-foreground: var(--brand-blue-corporate);
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: var(--brand-gold-technical);
 }
 
 .dark {

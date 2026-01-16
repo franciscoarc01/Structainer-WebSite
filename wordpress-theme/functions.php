@@ -52,7 +52,7 @@ function structainerv_enqueue_assets() {
     // Encolar el CSS de Vite
     wp_enqueue_style(
         'structainerv-main-styles',
-        STRUCTAINERV_THEME_URL . '/assets/index-DP0T8xU8.css',
+        STRUCTAINERV_THEME_URL . '/assets/index-CfVrcj5P.css',
         array(),
         STRUCTAINERV_VERSION
     );
@@ -60,7 +60,7 @@ function structainerv_enqueue_assets() {
     // Encolar el JavaScript de Vite como módulo
     wp_enqueue_script(
         'structainerv-main-script',
-        STRUCTAINERV_THEME_URL . '/assets/index-DmZ3gPWH.js',
+        STRUCTAINERV_THEME_URL . '/assets/index-CIikk33_.js',
         array(),
         STRUCTAINERV_VERSION,
         true

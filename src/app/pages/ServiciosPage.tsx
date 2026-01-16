@@ -1,373 +1,335 @@
 import { Link } from 'react-router-dom';
 import {
+  ArrowRight,
   ClipboardCheck,
-  FileText,
   Ruler,
-  HardHat,
-  Wrench,
-  Armchair,
-  Shield,
-  FolderCheck,
-  Settings,
-  CheckCircle2,
-  Factory,
   Building2,
-  Zap,
-  TrendingUp,
-  ArrowRight
+  Boxes,
+  Settings,
+  Wrench,
+  Shield,
+  Armchair,
+  RotateCw,
+  Key
 } from 'lucide-react';
 
-export function ServicesPage() {
-  const services = [
-    {
-      icon: ClipboardCheck,
-      number: '01',
-      title: 'PLANEACIÓN Y FACTIBILIDADES',
-      subtitle: 'Decisiones correctas antes de construir',
-      description: 'Evaluamos la viabilidad técnica, financiera y operativa del proyecto para asegurar una ejecución eficiente y sin desviaciones.',
-      includes: 'Estudios de factibilidad técnica y financiera, factibilidad de servicios (CFE, agua, drenaje, telecomunicaciones), análisis normativo inicial y planeación estratégica del proyecto.'
-    },
-    {
-      icon: FileText,
-      number: '02',
-      title: 'GESTORÍA LEGAL Y NORMATIVA',
-      subtitle: 'Cumplimiento total para operar sin riesgos',
-      description: 'Gestionamos todos los permisos y licencias necesarios para asegurar que el proyecto cumpla con la normatividad vigente.',
-      includes: 'Licencias de funcionamiento y obra, uso de suelo y cambios de giro, trámites ante dependencias municipales y estatales, Protección Civil, dictámenes técnicos y autorizaciones ambientales.'
-    },
-    {
-      icon: Ruler,
-      number: '03',
-      title: 'PROYECTO EJECUTIVO E INGENIERÍAS',
-      subtitle: 'Precisión técnica antes de ejecutar obra',
-      description: 'Desarrollamos el proyecto ejecutivo completo y todas las ingenierías necesarias para una ejecución eficiente y sin improvisaciones.',
-      includes: 'Planos arquitectónicos y renders, presupuesto general y cronograma, ingenierías estructural, eléctrica, hidrosanitaria, HVAC y contra incendios, sistemas de seguridad y control.'
-    },
-    {
-      icon: HardHat,
-      number: '04',
-      title: 'EJECUCIÓN DE OBRA CIVIL Y PREFABRICADA',
-      subtitle: 'Construcción tradicional y modular integrada',
-      description: 'Ejecutamos proyectos combinando obra civil y sistemas prefabricados para optimizar tiempos y costos.',
-      includes: 'Cimentaciones y estructuras, obra gris y acabados, instalaciones eléctricas, hidrosanitarias y HVAC, módulos prefabricados, casetas y oficinas móviles.'
-    },
-    {
-      icon: Wrench,
-      number: '05',
-      title: 'ESTRUCTURAS, SOLDADURA Y ACABADOS',
-      subtitle: 'Soluciones industriales a la medida',
-      description: 'Fabricamos e instalamos estructuras metálicas, mezanines y acabados industriales personalizados.',
-      includes: 'Soldadura y pailería, mezanines y estructuras especiales, carpintería, herrería y acabados, pisos, cancelería y pintura.'
-    },
-    {
-      icon: Armchair,
-      number: '06',
-      title: 'MOBILIARIO Y EQUIPAMIENTO',
-      subtitle: 'Espacios funcionales listos para operar',
-      description: 'Diseñamos, fabricamos e instalamos mobiliario y equipamiento acorde a la operación del cliente.',
-      includes: 'Diseño y fabricación de mobiliario a medida, instalación de mobiliario fijo y móvil, señalización corporativa y equipamiento interior.'
-    },
-    {
-      icon: Shield,
-      number: '07',
-      title: 'SEGURIDAD Y PROTECCIÓN',
-      subtitle: 'Infraestructura segura y certificada',
-      description: 'Implementamos sistemas de seguridad industrial y protección civil.',
-      includes: 'Sistemas contra incendio, extintores y señalética, CCTV, alarmas y control de accesos, capacitación y simulacros.'
-    },
-    {
-      icon: FolderCheck,
-      number: '08',
-      title: 'ENTREGA FINAL',
-      subtitle: 'Documentación completa y validada',
-      description: 'Entregamos el proyecto completamente documentado y listo para operación.',
-      includes: 'Planos As-Built, manuales y garantías, certificados de cumplimiento y capacitación al cliente.'
-    },
-    {
-      icon: Settings,
-      number: '09',
-      title: 'POSTVENTA Y MANTENIMIENTO',
-      subtitle: 'Acompañamiento después de la entrega',
-      description: 'Protegemos la inversión del cliente a largo plazo mediante mantenimiento preventivo y correctivo.',
-      includes: 'Mantenimiento HVAC, impermeabilización, instalaciones eléctricas e hidráulicas y contratos de mantenimiento anual.'
-    }
-  ];
+// Importar imágenes de servicios
+import planeacionImg from '../../assets/img/servicios/Planeaccion.jpeg';
+import proyectoEjecutivoImg from '../../assets/img/servicios/proyecto-ejecutivo.jpeg';
+import construccionTradicionalImg from '../../assets/img/servicios/Construcción Tradicional e Industrial.png.jpeg';
+import construccionModularImg from '../../assets/img/servicios/Construcción Modular.png.jpeg';
+import fabricacionMetalicaImg from '../../assets/img/servicios/Fabricación Metálica .jpeg';
+import mobiliarioImg from '../../assets/img/servicios/Mobiliario y Equipamiento Corporativo.jpeg';
+import mantenimientoImg from '../../assets/img/servicios/Mantenimiento Industrial .jpeg';
+import sistemasIndustrialesImg from '../../assets/img/servicios/Sistemas Industriales.png.jpeg';
+import seguridadIndustrialImg from '../../assets/img/servicios/Seguridad Industrial .jpeg';
+import proyectosLlaveImg from '../../assets/img/servicios/Proyectos Llave en Mano.jpeg';
 
-  const valueProps = [
-    {
-      icon: CheckCircle2,
-      title: 'UN SOLO RESPONSABLE',
-      description: 'Control total de principio a fin sin intermediarios'
-    },
-    {
-      icon: Zap,
-      title: 'TIEMPOS REDUCIDOS',
-      description: '60% más rápido que construcción tradicional'
-    },
-    {
-      icon: Shield,
-      title: 'CUMPLIMIENTO GARANTIZADO',
-      description: 'Normatividad y calidad certificada'
-    }
-  ];
+interface Service {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  capabilities: string[];
+  idealFor: string;
+  image: string;
+  cta: string;
+}
 
-  // Aplicaciones por industria
-  const industries = [
+export function ServiciosPage() {
+  const services: Service[] = [
     {
-      name: 'MINERÍA',
-      icon: Factory,
-      applications: ['Campamentos y dormitorios', 'Comedores industriales', 'Oficinas de sitio', 'Almacenes y talleres']
+      icon: <ClipboardCheck className="w-12 h-12 stroke-1" />,
+      title: 'Planeación, Factibilidades y Gestoría Normativa',
+      description: 'Reducimos riesgos, tiempos y bloqueos legales desde la etapa inicial del proyecto.',
+      capabilities: [
+        'Estudios de factibilidad técnica y financiera',
+        'Uso de suelo y cambio de uso',
+        'Permisos ambientales e impacto urbano',
+        'Licencias de funcionamiento y ejecución de obra',
+        'Trámites ante CFE, CEA y dependencias municipales',
+        'Protección Civil, dictámenes y opiniones técnicas'
+      ],
+      idealFor: 'Proyectos industriales, corporativos, comerciales y gubernamentales',
+      image: planeacionImg,
+      cta: 'Solicitar información'
     },
     {
-      name: 'AUTOMOTRIZ',
-      icon: Settings,
-      applications: ['Centros de capacitación', 'Áreas de inspección', 'Espacios de mantenimiento', 'Oficinas técnicas']
+      icon: <Ruler className="w-12 h-12 stroke-1" />,
+      title: 'Ingeniería y Proyecto Ejecutivo',
+      description: 'Diseñamos proyectos ejecutables, presupuestables y autorizables.',
+      capabilities: [
+        'Proyecto arquitectónico',
+        'Renders y visualización técnica',
+        'Presupuesto general y cronograma',
+        'Ingenierías: estructural, eléctrica (BT, MT, AT), hidrosanitaria, HVAC, PCI, seguridad',
+        'Metodología BIM',
+        'Reduce reprocesos, sobrecostos y errores en obra'
+      ],
+      idealFor: 'Todo tipo de proyectos que requieran ingeniería multidisciplinaria',
+      image: proyectoEjecutivoImg,
+      cta: 'Cotizar proyecto'
     },
     {
-      name: 'INDUSTRIAL',
-      icon: Building2,
-      applications: ['Naves industriales', 'Oficinas corporativas', 'Áreas de producción', 'Almacenes logísticos']
+      icon: <Building2 className="w-12 h-12 stroke-1" />,
+      title: 'Construcción Tradicional e Industrial',
+      description: 'Obra civil e infraestructura con estándares industriales y normativos.',
+      capabilities: [
+        'Terracerías y cimentaciones',
+        'Estructuras metálicas y de concreto',
+        'Naves industriales y edificios corporativos',
+        'Instalaciones eléctricas, hidráulicas y especiales',
+        'Sistemas contra incendio certificados',
+        'Urbanización y obra exterior'
+      ],
+      idealFor: 'Industria manufacturera, corporativos y proyectos gubernamentales',
+      image: construccionTradicionalImg,
+      cta: 'Solicitar información'
     },
     {
-      name: 'ENERGÍA',
-      icon: Zap,
-      applications: ['Subestaciones', 'Casetas de control', 'Oficinas de campo', 'Infraestructura temporal']
+      icon: <Boxes className="w-12 h-12 stroke-1" />,
+      title: 'Construcción Modular y Prefabricada',
+      description: 'Rapidez, control de costos y reubicabilidad.',
+      capabilities: [
+        'Casetas de vigilancia y obra',
+        'Oficinas móviles y módulos administrativos',
+        'Dormitorios, sanitarios y comedores',
+        'Campamentos industriales',
+        'Showrooms y remolques especializados',
+        'Fabricación, transporte e instalación'
+      ],
+      idealFor: 'Minería, energía, construcción, industria y eventos',
+      image: construccionModularImg,
+      cta: 'Cotizar proyecto'
+    },
+    {
+      icon: <Settings className="w-12 h-12 stroke-1" />,
+      title: 'Fabricación Metálica y Estructural',
+      description: 'Soluciones a medida para entornos industriales exigentes.',
+      capabilities: [
+        'Estructuras metálicas',
+        'Pailería y soldadura especializada',
+        'Mezanines y plataformas',
+        'Pergolados y cubiertas',
+        'Remodelaciones industriales'
+      ],
+      idealFor: 'Industria en general, almacenes y espacios que requieran estructuras especiales',
+      image: fabricacionMetalicaImg,
+      cta: 'Solicitar información'
+    },
+    {
+      icon: <Wrench className="w-12 h-12 stroke-1" />,
+      title: 'Sistemas Industriales Especializados',
+      description: 'Infraestructura crítica para operación continua.',
+      capabilities: [
+        'Sistemas de tubería industrial',
+        'HVAC industrial',
+        'Sistemas contra incendio',
+        'Drenajes y redes técnicas',
+        'Soluciones de producción',
+        'Suministro de tubos de acero'
+      ],
+      idealFor: 'Plantas industriales y proyectos con requerimientos técnicos especializados',
+      image: sistemasIndustrialesImg,
+      cta: 'Cotizar proyecto'
+    },
+    {
+      icon: <Shield className="w-12 h-12 stroke-1" />,
+      title: 'Seguridad Industrial y Protección',
+      description: 'Cumplimiento normativo y protección operativa.',
+      capabilities: [
+        'Sistemas contra incendio (hidrantes, rociadores, detección)',
+        'Extintores, gabinetes y señalética',
+        'CCTV, control de accesos y alarmas',
+        'Capacitación, simulacros y brigadas',
+        'Dictámenes y certificaciones'
+      ],
+      idealFor: 'Cualquier instalación que requiera cumplimiento normativo en protección civil',
+      image: seguridadIndustrialImg,
+      cta: 'Solicitar información'
+    },
+    {
+      icon: <Armchair className="w-12 h-12 stroke-1" />,
+      title: 'Mobiliario y Equipamiento Corporativo',
+      description: 'Espacios funcionales listos para operar.',
+      capabilities: [
+        'Diseño y fabricación de mobiliario a medida',
+        'Oficinas, cocinas y áreas operativas',
+        'Señalización corporativa',
+        'Instalación y puesta en marcha'
+      ],
+      idealFor: 'Oficinas corporativas, espacios comerciales y áreas administrativas',
+      image: mobiliarioImg,
+      cta: 'Cotizar proyecto'
+    },
+    {
+      icon: <RotateCw className="w-12 h-12 stroke-1" />,
+      title: 'Mantenimiento Industrial y Postventa',
+      description: 'Protegemos la inversión en el largo plazo.',
+      capabilities: [
+        'Mantenimiento preventivo y correctivo',
+        'HVAC, impermeabilización y pintura',
+        'Instalaciones eléctricas e hidráulicas',
+        'Contratos anuales',
+        'Garantías y respaldo técnico'
+      ],
+      idealFor: 'Instalaciones existentes que requieran mantenimiento continuo',
+      image: mantenimientoImg,
+      cta: 'Solicitar información'
+    },
+    {
+      icon: <Key className="w-12 h-12 stroke-1" />,
+      title: 'Proyectos Llave en Mano',
+      description: 'Un solo proveedor. Una sola responsabilidad.',
+      capabilities: [
+        'Planeación y gestoría',
+        'Ingeniería y proyecto ejecutivo',
+        'Fabricación y construcción',
+        'Equipamiento y seguridad',
+        'Entrega final y postventa',
+        'Proyecto listo para operar desde el día uno'
+      ],
+      idealFor: 'Clientes que buscan simplificar la gestión con un solo responsable',
+      image: proyectosLlaveImg,
+      cta: 'Cotizar proyecto'
     }
-  ];
-
-  // Flujo de trabajo integrado
-  const workflowSteps = [
-    { step: '1', phase: 'PLANEACIÓN', activities: 'Factibilidad + Permisos' },
-    { step: '2', phase: 'INGENIERÍA', activities: 'Proyecto ejecutivo + Especificaciones' },
-    { step: '3', phase: 'EJECUCIÓN', activities: 'Construcción + Instalaciones' },
-    { step: '4', phase: 'EQUIPAMIENTO', activities: 'Mobiliario + Seguridad' },
-    { step: '5', phase: 'ENTREGA', activities: 'Validación + Mantenimiento' }
   ];
 
   return (
-    <div>
-      {/* 1. HERO PRINCIPAL - REDISEÑADO */}
-      <section className="relative bg-gray-900 text-white">
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1080)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+    <div className="bg-white">
+      {/* HERO SECTION */}
+      <section className="bg-gradient-to-br from-slate-50 to-white py-20 md:py-32 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-none tracking-tight">
-              SERVICIOS
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+              Soluciones integrales en construcción, ingeniería y servicios industriales
             </h1>
-            <div className="border-t-4 border-b-4 border-yellow-600 py-8 mb-8">
-              <p className="text-2xl md:text-4xl font-bold text-white leading-tight">
-                MODELO LLAVE EN MANO PARA PROYECTOS INDUSTRIALES Y CORPORATIVOS
-              </p>
-            </div>
-            <p className="text-xl text-gray-300 max-w-3xl leading-relaxed">
-              Integramos 9 servicios especializados bajo un solo responsable: desde planeación y permisos hasta entrega final y mantenimiento.
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-10">
+              Operamos bajo un modelo 360° que integra planeación, gestoría, ingeniería, fabricación, construcción, equipamiento y mantenimiento para proyectos industriales, corporativos y gubernamentales.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. PROPUESTA DE VALOR - MEJORADA */}
-      <section className="py-20 bg-white border-b-4 border-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black mb-4">POR QUÉ ELEGIR NUESTRO MODELO</h2>
-            <p className="text-gray-600 text-lg">Ventajas del servicio llave en mano</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {valueProps.map((prop, index) => (
-              <div key={index} className="border-2 border-gray-900 p-8 hover:bg-gray-900 hover:text-white transition-all duration-300 group">
-                <prop.icon className="w-16 h-16 mb-6 text-gray-900 group-hover:text-yellow-600 transition-colors" />
-                <h3 className="text-xl font-black mb-3">{prop.title}</h3>
-                <p className="opacity-80">{prop.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 bg-gray-900 text-white p-10 border-l-8 border-yellow-600">
-            <p className="text-2xl font-bold leading-tight">
-              Gestionamos cada etapa del proyecto bajo un esquema integral que optimiza tiempos, costos y cumplimiento normativo, entregando espacios listos para operar desde el primer día.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. FLUJO DE TRABAJO INTEGRADO - NUEVA SECCIÓN */}
-      <section className="py-28 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">FLUJO DE TRABAJO INTEGRADO</h2>
-            <p className="text-gray-600 text-lg">5 fases coordinadas para ejecución eficiente</p>
-          </div>
-
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-              {workflowSteps.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-gray-900 text-white w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                    <span className="text-4xl font-black">{item.step}</span>
-                  </div>
-                  <h3 className="text-lg font-black mb-3">{item.phase}</h3>
-                  <p className="text-sm text-gray-600 leading-tight">{item.activities}</p>
-                  {index < workflowSteps.length - 1 && (
-                    <ArrowRight className="w-6 h-6 mx-auto mt-4 text-gray-400 hidden md:block" />
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. SERVICIOS ESPECIALIZADOS - SIN FOTOS, DISEÑO INDUSTRIAL */}
-      <section className="py-28 bg-white border-t-4 border-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">SERVICIOS ESPECIALIZADOS</h2>
-            <p className="text-gray-600 text-lg">9 áreas de servicio para ejecución completa</p>
-          </div>
-
-          <div className="max-w-6xl mx-auto space-y-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="border-2 border-gray-900 hover:border-yellow-600 transition-colors"
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/contacto"
+                className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 transition-colors group"
               >
-                <div className="p-8">
-                  <div className="flex items-start gap-6 mb-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-20 h-20 bg-gray-900 text-white flex items-center justify-center">
-                        <service.icon className="w-10 h-10" />
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-sm font-black text-yellow-600 mb-2 tracking-wider">
-                        {service.number}
-                      </div>
-                      <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
-                        {service.title}
-                      </h3>
-                      <p className="text-lg text-gray-600 font-semibold mb-4">
-                        {service.subtitle}
-                      </p>
-                      <p className="text-gray-700 mb-6 leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
+                <span>Solicitar asesoría técnica</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/proyectos"
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-900 font-semibold px-8 py-4 border-2 border-gray-900 transition-colors group"
+              >
+                <span>Ver proyectos ejecutados</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICIOS */}
+      {services.map((service, index) => {
+        const isImageLeft = index % 2 === 0;
+
+        return (
+          <section
+            key={index}
+            className="py-16 md:py-24 border-b border-gray-100"
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                {/* IMAGEN */}
+                <div className={`${isImageLeft ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div
+                    className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden"
+                    style={{
+                      backgroundImage: `url(${service.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center'
+                    }}
+                  />
+                </div>
+
+                {/* CONTENIDO */}
+                <div className={`${isImageLeft ? 'lg:order-2' : 'lg:order-1'}`}>
+                  {/* Icono */}
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-50 text-blue-600 rounded-lg mb-6">
+                    {service.icon}
                   </div>
 
-                  <div className="pl-26 pt-6 border-t-2 border-gray-200">
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      <span className="font-black text-gray-900 uppercase tracking-wider text-xs block mb-2">INCLUYE:</span>
-                      {service.includes}
+                  {/* Título */}
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+                    {service.title}
+                  </h2>
+
+                  {/* Descripción */}
+                  <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Capacidades */}
+                  <div className="space-y-2.5 mb-6">
+                    {service.capabilities.map((capability, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <div className="mt-1.5 flex-shrink-0">
+                          <div className="w-1.5 h-1.5 bg-amber-500 rounded-full" />
+                        </div>
+                        <span className="text-gray-800 text-sm md:text-base">
+                          {capability}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Ideal para */}
+                  <div className="bg-slate-50 border-l-4 border-blue-600 p-4 mb-8">
+                    <p className="text-sm font-semibold text-gray-600 mb-1">
+                      Ideal para:
+                    </p>
+                    <p className="text-sm text-gray-900">
+                      {service.idealFor}
                     </p>
                   </div>
+
+                  {/* CTA */}
+                  <Link
+                    to="/contacto"
+                    className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-semibold px-8 py-4 transition-colors group"
+                  >
+                    <span>{service.cta}</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. APLICACIONES POR INDUSTRIA - NUEVA SECCIÓN */}
-      <section className="py-28 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">APLICACIONES POR INDUSTRIA</h2>
-            <p className="text-gray-600 text-lg">Cómo aplicamos nuestros servicios en diferentes sectores</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-              <div key={index} className="bg-white border-2 border-gray-900 p-6">
-                <industry.icon className="w-12 h-12 mb-4 text-gray-900" />
-                <h3 className="text-xl font-black mb-4">{industry.name}</h3>
-                <ul className="space-y-2">
-                  {industry.applications.map((app, idx) => (
-                    <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 flex-shrink-0 mt-0.5 text-gray-900" />
-                      <span>{app}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. VENTAJAS COMPETITIVAS */}
-      <section className="py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">VENTAJAS COMPETITIVAS</h2>
-          </div>
-
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 border-l-8 border-gray-900 p-8">
-              <h3 className="text-2xl font-black mb-4">REDUCCIÓN DE TIEMPOS</h3>
-              <p className="text-gray-700 mb-4">Fabricación simultánea y estandarizada que acelera hasta 60% vs construcción tradicional.</p>
-              <div className="flex items-baseline gap-2">
-                <TrendingUp className="w-6 h-6 text-gray-900" />
-                <span className="text-sm font-semibold text-gray-600">3-5 meses promedio de ejecución</span>
-              </div>
             </div>
+          </section>
+        );
+      })}
 
-            <div className="bg-gray-50 border-l-8 border-gray-900 p-8">
-              <h3 className="text-2xl font-black mb-4">CONTROL TOTAL</h3>
-              <p className="text-gray-700 mb-4">Gestión integral bajo un solo responsable, eliminando coordinación entre múltiples proveedores.</p>
-              <div className="flex items-baseline gap-2">
-                <CheckCircle2 className="w-6 h-6 text-gray-900" />
-                <span className="text-sm font-semibold text-gray-600">Un solo punto de contacto</span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 border-l-8 border-gray-900 p-8">
-              <h3 className="text-2xl font-black mb-4">CUMPLIMIENTO NORMATIVO</h3>
-              <p className="text-gray-700 mb-4">Adherencia certificada a NOM, códigos locales y estándares de seguridad industrial.</p>
-              <div className="flex items-baseline gap-2">
-                <Shield className="w-6 h-6 text-gray-900" />
-                <span className="text-sm font-semibold text-gray-600">Permisos y certificaciones incluidos</span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 border-l-8 border-gray-900 p-8">
-              <h3 className="text-2xl font-black mb-4">MANTENIMIENTO POSTVENTA</h3>
-              <p className="text-gray-700 mb-4">Acompañamiento técnico continuo para proteger la inversión a largo plazo.</p>
-              <div className="flex items-baseline gap-2">
-                <Settings className="w-6 h-6 text-gray-900" />
-                <span className="text-sm font-semibold text-gray-600">Garantía y seguimiento incluidos</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. CTA FINAL - MEJORADO */}
-      <section className="py-32 bg-gray-900 text-white border-t-8 border-yellow-600">
+      {/* CIERRE COMERCIAL */}
+      <section className="py-20 md:py-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm uppercase tracking-widest font-bold text-yellow-600 mb-8">
-            LISTO PARA INICIAR TU PROYECTO
-          </p>
-          <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight">
-            HABLEMOS DE TU PROYECTO INDUSTRIAL O CORPORATIVO
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Proyectos Llave en Mano
           </h2>
-          <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-            Nuestro equipo técnico está preparado para analizar tu proyecto y ofrecerte una solución integral llave en mano.
+          <p className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+            Cada solución forma parte de un modelo integral que nos permite ejecutar proyectos completos con un solo responsable. Desde la planeación hasta la entrega final.
           </p>
-          <Link
-            to="/contact"
-            className="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-bold px-12 py-5 transition-colors text-xl"
-          >
-            Solicitar asesoría técnica
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contacto"
+              className="inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-600 text-white font-bold px-12 py-5 transition-colors text-lg group"
+            >
+              <span>Solicitar asesoría técnica</span>
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/proyectos"
+              className="inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-gray-900 font-bold px-12 py-5 transition-colors text-lg group"
+            >
+              <span>Ver proyectos ejecutados</span>
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>

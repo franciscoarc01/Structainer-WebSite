@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { HomePage } from './pages/InicioPage';
-import { AboutPage } from './pages/NosotrosPage';
-import { ServicesPage } from './pages/ServiciosPage';
+import { InicioPage } from './pages/InicioPage';
+import { NosotrosPage } from './pages/NosotrosPage';
+import { ServiciosPage } from './pages/ServiciosPage';
+import { ProductosPage } from './pages/ProductosPage';
 import { ProjectsPage } from './pages/ProyectosPage';
-import { ProductsPage } from './pages/ProductosPage';
 import { ContactPage } from './pages/ContactoPage';
+import { DivisionesPage } from './pages/DivisionesPage';
 
 export default function App() {
   return (
@@ -15,12 +16,16 @@ export default function App() {
         <Header />
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
+            {/* Página principal */}
+            <Route path="/" element={<InicioPage />} />
+
+            {/* Páginas principales */}
+            <Route path="/nosotros" element={<NosotrosPage />} />
+            <Route path="/divisiones" element={<DivisionesPage />} />
+            <Route path="/servicios" element={<ServiciosPage />} />
+            <Route path="/productos" element={<ProductosPage />} />
+            <Route path="/proyectos" element={<ProjectsPage />} />
+            <Route path="/contacto" element={<ContactPage />} />
           </Routes>
         </main>
         <Footer />
