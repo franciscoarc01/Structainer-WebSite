@@ -18,7 +18,6 @@ export default function App() {
           <Routes>
             {/* Página principal */}
             <Route path="/" element={<InicioPage />} />
-
             {/* Páginas principales */}
             <Route path="/nosotros" element={<NosotrosPage />} />
             <Route path="/divisiones" element={<DivisionesPage />} />
