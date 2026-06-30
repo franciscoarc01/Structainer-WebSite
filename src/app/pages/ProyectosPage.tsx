@@ -34,9 +34,9 @@ import moduloVenta2 from '../../assets/img/proyectos/modulo ventas 2 .jpg';
 import oficinaZevana from '../../assets/img/proyectos/oficina corporativa zevana 1.jpeg';
 
 // Remolque de Baños
-import remolque1 from '../../assets/img/proyectos/remolque de baños 1 .jpeg';
-import remolque2 from '../../assets/img/proyectos/remolque de baños 2 .jpeg';
-import remolque3 from '../../assets/img/proyectos/remolque de baños 3 .jpeg';
+import remolque1 from '../../assets/img/proyectos/remolque-bannos1.jpeg';
+import remolque2 from '../../assets/img/proyectos/remolque-bannos2.jpeg';
+import remolque3 from '../../assets/img/proyectos/remolque-bannos3.jpeg';
 
 interface Project {
   title: string;
@@ -90,11 +90,10 @@ function ProjectCarousel({ images, title }: { images: string[]; title: string })
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentIndex
-                    ? 'bg-white w-6'
-                    : 'bg-white/50 hover:bg-white/75'
-                }`}
+                className={`w-2 h-2 rounded-full transition-all ${index === currentIndex
+                  ? 'bg-white w-6'
+                  : 'bg-white/50 hover:bg-white/75'
+                  }`}
                 aria-label={`Ir a imagen ${index + 1}`}
               />
             ))}

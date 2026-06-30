@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import {
-  Settings,
   Building2,
   Target,
   TrendingUp,
@@ -9,7 +8,6 @@ import {
   Lightbulb,
   Leaf,
   Shield,
-  Search,
   Clock,
   Wrench,
   Users,
@@ -27,9 +25,9 @@ import {
 } from 'lucide-react';
 
 // Importar imágenes locales
-import quienesSomosImg from '../../assets/img/nosotros/QUIÉNES SOMOS.jpeg';
+import quienesSomosImg from '../../assets/img/nosotros/quienes-somos.jpeg';
 import colaboracionesImg from '../../assets/img/nosotros/Colaboraciones.png';
-import plantasProductivasImg from '../../assets/img/nosotros/PLANTAS PRODUCTIVAS.jpeg';
+import plantasProductivasImg from '../../assets/img/nosotros/plantas-productivas.jpeg';
 
 export function NosotrosPage() {
   // Estadísticas

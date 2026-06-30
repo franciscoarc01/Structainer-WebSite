@@ -31,22 +31,22 @@ import heroImg from '../../assets/img/divisiones/contruccion modular .jpeg';
 import aboutImg from '../../assets/img/inicio/Sobre nosotros.png';
 
 // SECTORES
-import industriaImg from '../../assets/img/inicio/Industria.jpeg';
+import industriaImg from '../../assets/img/inicio/industria.jpeg';
 import agriculturaImg from '../../assets/img/inicio/agricultura.jpeg';
-import educacionImg from '../../assets/img/inicio/educacion.png.jpeg';
-import construccionImg from '../../assets/img/inicio/contruccion.png.jpeg';
-import mineriaImg from '../../assets/img/inicio/Mineria.png.jpeg';
+import educacionImg from '../../assets/img/inicio/educacion.jpeg';
+import construccionImg from '../../assets/img/inicio/contruccion.jpeg';
+import mineriaImg from '../../assets/img/inicio/mineria.jpeg';
 import saludImg from '../../assets/img/inicio/salud.jpeg';
-import petroleoImg from '../../assets/img/inicio/petroleo y gas .jpeg';
+import petroleoImg from '../../assets/img/inicio/petroleoygas.jpeg';
 
 // PRODUCTOS (Imágenes para cada categoría)
-import casetasImg from '../../assets/img/inicio/Casetas especializadas .jpeg';
-import modulosImg from '../../assets/img/inicio/Módulos prefabricados y modulares.jpeg';
-import remolquesImg from '../../assets/img/inicio/Remolques y soluciones móviles.jpeg';
-import estructurasImg from '../../assets/img/inicio/Estructuras metálicas y soluciones industriales.jpeg';
-import sistemasImg from '../../assets/img/inicio/Sistemas industriales y de seguridad.jpeg';
-import mobiliarioImg from '../../assets/img/inicio/Mobiliario y equipamiento.jpeg';
-import mantenimientoImg from '../../assets/img/inicio/Mantenimiento y postventa .jpeg';
+import casetasImg from '../../assets/img/inicio/casetas-especializadas.jpeg';
+import modulosImg from '../../assets/img/inicio/modulos-prefabricados-modulares.jpeg';
+import remolquesImg from '../../assets/img/inicio/soluciones-moviles.jpeg';
+import estructurasImg from '../../assets/img/inicio/estructuras-metalicas-y-soluciones-industriales.jpeg';
+import sistemasImg from '../../assets/img/inicio/sistemas-industriales-y-seguridad.jpeg';
+import mobiliarioImg from '../../assets/img/inicio/mobiliario-equipamiento.jpeg';
+import mantenimientoImg from '../../assets/img/inicio/mantenimiento-y-postventa.jpeg';
 
 // PROYECTOS - Imágenes reales de los proyectos
 import bodegaTeletonImg from '../../assets/img/proyectos/bodega teleton 1.jpeg';
@@ -56,11 +56,10 @@ import oficinaZevanaImg from '../../assets/img/proyectos/oficina corporativa zev
 import escuelaModularImg from '../../assets/img/proyectos/escula modular 1 .jpg';
 import estructurasProyectoImg from '../../assets/img/proyectos/estructuras metalicas 1 .jpg';
 import moduloVentaImg from '../../assets/img/proyectos/modulo de venta 01.jpg';
-import remolqueBanosImg from '../../assets/img/proyectos/remolque de baños 1 .jpeg';
+import remolqueBanosImg from '../../assets/img/proyectos/remolque-bannos1.jpeg';
 
 // CLIENTES
 import niveaLogo from '../../assets/logos/NIVEA.jpg';
-import gknLogo from '../../assets/logos/GKN.PNG.jpg';
 import farmaciasLogo from '../../assets/logos/farmacias gualajara.jpg';
 import hertzLogo from '../../assets/logos/hertz.png';
 import castoresLogo from '../../assets/logos/grupo castores.png';
@@ -76,7 +75,7 @@ import tresGuerrasLogo from '../../assets/logos/PAQUETERIA TRES GUERRAS.jpg';
 import mapremexLogo from '../../assets/logos/MAPREMEX.png';
 
 // CTA FINAL
-import ctaFinalImg from '../../assets/img/servicios/Proyectos Llave en Mano.jpeg';
+import ctaFinalImg from '../../assets/img/servicios/proyectos-hero.jpeg';
 
 export function InicioPage() {
   // ============================================
@@ -340,7 +339,6 @@ export function InicioPage() {
   // ============================================
   const clientes = [
     { name: 'NIVEA', logo: niveaLogo },
-    { name: 'GKN Automotive', logo: gknLogo },
     { name: 'Farmacias Guadalajara', logo: farmaciasLogo },
     { name: 'Hertz México', logo: hertzLogo },
     { name: 'OXXO', logo: oxxoLogo },
