@@ -23,6 +23,7 @@ import {
   Scale,
   Sparkles
 } from 'lucide-react';
+import { Organigrama } from '@/app/components/Organigrama';
 
 // Importar imágenes locales
 import quienesSomosImg from '../../assets/img/nosotros/quienes-somos.jpeg';
@@ -267,6 +268,9 @@ export function NosotrosPage() {
           </div>
         </div>
       </section>
+
+      {/* Organigrama */}
+      <Organigrama />
 
       {/* 5. CONFIANZA Y BÚSQUEDA DE LA EXCELENCIA */}
       <section className="py-16 md:py-24 lg:py-40 bg-gray-900 text-white">
