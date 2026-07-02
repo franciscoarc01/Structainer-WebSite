@@ -1,0 +1,139 @@
+{
+    "posiciones": [
+        {
+            "id": "ceo",
+            "nombre": "Nombre del Director",
+            "cargo": "Director General (CEO)",
+            "departamento": "Dirección",
+            "imagen": "/assets/img/equipo/ceo.jpg",
+            "descripcion": "Encargado de la estrategia global y dirección de Structainer V Group."
+        },
+        {
+            "id": "coo",
+            "nombre": "Nombre del Director",
+            "cargo": "Director de Operaciones",
+            "departamento": "Operaciones",
+            "imagen": "/assets/img/equipo/operaciones.jpg",
+            "descripcion": "Encargado de la estrategia global y dirección de Structainer V Group."
+        },
+        {
+            "id": "cpo",
+            "nombre": "Nombre del Gerente",
+            "cargo": "Gerente de Planta Productiva",
+            "departamento": "Producción",
+            "imagen": "/assets/img/equipo/gerencia-planta.jpg",
+            "descripcion": "Encargado de la estrategia global y dirección de Structainer V Group."
+        },
+        {
+            "id": "cengo",
+            "nombre": "Nombre del Ing. Jefe",
+            "cargo": "Ingeniero Jefe",
+            "departamento": "Ingeniería",
+            "imagen": "/assets/img/equipo/gerencia-ingenieria.jpg",
+            "descripcion": "Encargado de la estrategia global y dirección de Structainer V Group."
+        },
+        {
+            "id": "gcs",
+            "nombre": "Nombre del Supervisor",
+            "cargo": "Supervisor General de Obra",
+            "departamento": "Construcción",
+            "imagen": "/assets/img/equipo/supervision-obra.jpg",
+            "descripcion": "Encargado de la estrategia global y dirección de Structainer V Group."
+        },
+        {
+            "id": "cco",
+            "nombre": "Nombre del Director",
+            "cargo": "Director Comercial",
+            "departamento": "Ventas y Marketing",
+            "imagen": "/assets/img/equipo/comercial.jpg",
+            "descripcion": "Encargado de la estrategia global y dirección de Structainer V Group."
+        },
+        {
+            "id": "sm",
+            "nombre": "Nombre del Gerente",
+            "cargo": "Gerente de Ventas Industriales",
+            "departamento": "Ventas",
+            "imagen": "/assets/img/equipo/gerencia-ventas.jpg",
+            "descripcion": "Encargado de la estrategia global y dirección de Structainer V Group."
+        },
+        {
+            "id": "pmo",
+            "nombre": "Nombre del Especialista",
+            "cargo": "Especialista en Gestión de Proyectos",
+            "departamento": "Proyectos",
+            "imagen": "/assets/img/equipo/gestion-proyectos.jpg",
+            "descripcion": "Encargado de la estrategia global y dirección de Structainer V Group."
+        },
+        {
+            "id": "cfo",
+            "nombre": "Nombre del Director",
+            "cargo": "Director de Administración y Finanzas",
+            "departamento": "Administración",
+            "imagen": "/assets/img/equipo/admin.jpg",
+            "descripcion": "Encargado de la estrategia global y dirección de Structainer V Group."
+        },
+        {
+            "id": "cho",
+            "nombre": "Nombre del Gerente",
+            "cargo": "Gerente de Recursos Humanos",
+            "departamento": "RRHH",
+            "imagen": "/assets/img/equipo/recursos-humanos.jpg",
+            "descripcion": "Encargado de la estrategia global y dirección de Structainer V Group."
+        },
+        {
+            "id": "qrm",
+            "nombre": "Nombre del Gestor",
+            "cargo": "Gestor de Calidad y Normativas",
+            "departamento": "Calidad",
+            "imagen": "/assets/img/equipo/calidad-normativa.jpg",
+            "descripcion": "Encargado de la estrategia global y dirección de Structainer V Group."
+        }
+    ],
+    "jerarquias": [
+        {
+            "id": "1",
+            "source": "ceo",
+            "target": "coo"
+        },
+        {
+            "id": "2",
+            "source": "coo",
+            "target": "cpo"
+        },
+        {
+            "id": "3",
+            "source": "coo",
+            "target": "cengo"
+        },
+        {
+            "id": "4",
+            "source": "coo",
+            "target": "gcs"
+        },
+        {
+            "id": "5",
+            "source": "ceo",
+            "target": "cco"
+        },
+        {
+            "id": "6",
+            "source": "cco",
+            "target": "sm"
+        },
+        {
+            "id": "7",
+            "source": "ceo",
+            "target": "cfo"
+        },
+        {
+            "id": "8",
+            "source": "cfo",
+            "target": "cho"
+        },
+        {
+            "id": "9",
+            "source": "cfo",
+            "target": "qrm"
+        }
+    ]
+}

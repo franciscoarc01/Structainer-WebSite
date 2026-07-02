@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from "react"
 import {
   Building2,
   Target,
@@ -23,6 +24,9 @@ import {
   Scale,
   Sparkles
 } from 'lucide-react';
+
+import ReactFlow, { Background, Controls, Position } from '@xyflow/react';
+import '@xyflow/react/dist/style.css';
 
 // Importar imágenes locales
 import quienesSomosImg from '../../assets/img/nosotros/quienes-somos.jpeg';
@@ -142,6 +146,37 @@ export function NosotrosPage() {
     'Regulaciones de seguridad e higiene (STPS)',
     'Dictámenes de protección civil y visto bueno de bomberos'
   ];
+
+  let organigramaData: any
+
+  useEffect(() => {
+    const getOrganigramaData = async () => {
+      try {
+        const response: Response = await fetch('/organigrama.info.json');
+        const data = await response.json();
+        console.log(data);
+        organigramaData.posiciones = data.posiciones.map((posicion: any) => (
+          {
+            id: posicion.id,
+            data: {
+              nombre: posicion.nombre,
+              cargo: posicion.cargo,
+              departamento: posicion.departamento,
+              imagen: posicion.imagen,
+              descripcion: posicion.descripcion
+            },
+            position: { x: 0, y: 0 }
+          }
+        ));
+        organigramaData.jerarquias = data.jerarquias;
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    getOrganigramaData()
+    return () => { }
+  }, [organigramaData])
+
 
   return (
     <div>
@@ -267,6 +302,12 @@ export function NosotrosPage() {
           </div>
         </div>
       </section>
+
+      <div className="app-container">
+        <div className="app-canvas">
+
+        </div>
+      </div>
 
       {/* 5. CONFIANZA Y BÚSQUEDA DE LA EXCELENCIA */}
       <section className="py-16 md:py-24 lg:py-40 bg-gray-900 text-white">
