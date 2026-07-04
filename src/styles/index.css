@@ -1,3 +1,15 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+
+.w-stretch {
+    width: stretch;
+}
+
+.h-stretch {
+    height: stretch;
+}
+
+.w-stretch {
+    width: stretch;
+}
