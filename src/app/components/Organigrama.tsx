@@ -23,6 +23,7 @@ import colWilbert from "@/assets/img/nosotros/colaboradores/Wilbert.webp"
 import colVictorHugo from "@/assets/img/nosotros/colaboradores/Victor-Hugo.webp"
 import colMauricioGzlez from "@/assets/img/nosotros/colaboradores/Mauricio-Gzlez.webp"
 import colMaDelCarmen from "@/assets/img/nosotros/colaboradores/Ma-Del-Carmen.webp"
+import colSistemas from "@/assets/img/nosotros/colaboradores/ChatGPT-Image-3-jul-2026_04-57-21pm.webp"
 
 export const Organigrama: React.FC = () => {
     const containerRef = React.useRef<HTMLDivElement>(null);
@@ -50,7 +51,8 @@ export const Organigrama: React.FC = () => {
         colWilbert,
         colVictorHugo,
         colMauricioGzlez,
-        colMaDelCarmen
+        colMaDelCarmen,
+        colSistemas
     }
 
     React.useEffect(() => {
@@ -281,12 +283,17 @@ export const Organigrama: React.FC = () => {
                     <div className="flex flex-col items-center">
                         <h2 className="text-[17pt] font-medium text-gray-600 text-center mb-[2vmin]">Sistemas</h2>
                     </div>
-                    <div className='flex flex-row items-center'>
-                        <div className='text-center pb-[2vmin]'>
-                            <h3 className='bg-[var(--brand-gray-neutral)] mx-[0.5rem] p-[0.5rem] rounded-sm'>Ing. Alan</h3>
+                    <div className='flex flex-row items-center gap-[2vmin] w-stretch'>
+                        <div className='bg-[var(--brand-blue-corporate)] rounded-lg border-2 border-gray-400 p-[1rem]'>
+                            <div className='text-center pb-[2vmin] bg-[var(--brand-gray-neutral)] mx-[0.5rem] p-[0.5rem] rounded-sm'>
+                                <h3 className='mx-[0.5rem]'>Ing. Alan</h3>
+                            </div>
                         </div>
-                        <div className='text-center pb-[2vmin]'>
-                            <h3 className='bg-[var(--brand-gray-neutral)] mx-[0.5rem] p-[0.5rem] rounded-sm'>Ing. Francisco Árciga</h3>
+                        <div className='bg-[var(--brand-blue-corporate)] rounded-lg border-2 border-gray-400 p-[1rem] w-full'>
+                            <div className='text-center pb-[2vmin] bg-[var(--brand-gray-neutral)] mx-[0.5rem] p-[0.5rem] rounded-sm'>
+                                <img src={imgCol.colSistemas} alt="" className='w-[5rem] block mx-auto rounded-full mb-[5%]' />
+                                <h3 className='mx-[0.5rem]'>Ing. Francisco Árciga</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
