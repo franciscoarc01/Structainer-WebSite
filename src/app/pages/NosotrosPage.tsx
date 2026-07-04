@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import {
-  Settings,
   Building2,
   Target,
   TrendingUp,
@@ -9,7 +8,6 @@ import {
   Lightbulb,
   Leaf,
   Shield,
-  Search,
   Clock,
   Wrench,
   Users,
@@ -25,11 +23,12 @@ import {
   Scale,
   Sparkles
 } from 'lucide-react';
+import { Organigrama } from '@/app/components/Organigrama';
 
 // Importar imágenes locales
-import quienesSomosImg from '../../assets/img/nosotros/QUIÉNES SOMOS.jpeg';
+import quienesSomosImg from '../../assets/img/nosotros/quienes-somos.jpeg';
 import colaboracionesImg from '../../assets/img/nosotros/Colaboraciones.png';
-import plantasProductivasImg from '../../assets/img/nosotros/PLANTAS PRODUCTIVAS.jpeg';
+import plantasProductivasImg from '../../assets/img/nosotros/plantas-productivas.jpeg';
 
 export function NosotrosPage() {
   // Estadísticas
@@ -269,6 +268,9 @@ export function NosotrosPage() {
           </div>
         </div>
       </section>
+
+      {/* Organigrama */}
+      <Organigrama />
 
       {/* 5. CONFIANZA Y BÚSQUEDA DE LA EXCELENCIA */}
       <section className="py-16 md:py-24 lg:py-40 bg-gray-900 text-white">

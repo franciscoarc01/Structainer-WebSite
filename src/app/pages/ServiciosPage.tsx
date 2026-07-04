@@ -14,16 +14,16 @@ import {
 } from 'lucide-react';
 
 // Importar imágenes de servicios
-import planeacionImg from '../../assets/img/servicios/Planeaccion.jpeg';
+import planeacionImg from '../../assets/img/servicios/planeacion.jpeg';
 import proyectoEjecutivoImg from '../../assets/img/servicios/proyecto-ejecutivo.jpeg';
-import construccionTradicionalImg from '../../assets/img/servicios/Construcción Tradicional e Industrial.png.jpeg';
-import construccionModularImg from '../../assets/img/servicios/Construcción Modular.png.jpeg';
-import fabricacionMetalicaImg from '../../assets/img/servicios/Fabricación Metálica .jpeg';
+import construccionTradicionalImg from '../../assets/img/servicios/Construccion-Tradicional-e-Industrial.jpeg';
+import construccionModularImg from '../../assets/img/servicios/Construccion-Modular.jpeg';
+import fabricacionMetalicaImg from '../../assets/img/servicios/Fabricacion-Metalica.jpeg';
 import mobiliarioImg from '../../assets/img/servicios/Mobiliario y Equipamiento Corporativo.jpeg';
 import mantenimientoImg from '../../assets/img/servicios/Mantenimiento Industrial .jpeg';
-import sistemasIndustrialesImg from '../../assets/img/servicios/Sistemas Industriales.png.jpeg';
-import seguridadIndustrialImg from '../../assets/img/servicios/Seguridad Industrial .jpeg';
-import proyectosLlaveImg from '../../assets/img/servicios/Proyectos Llave en Mano.jpeg';
+import sistemasIndustrialesImg from '../../assets/img/servicios/sistemasindustriales.jpeg';
+import seguridadIndustrialImg from '../../assets/img/servicios/seguridad-industrial.jpeg';
+import proyectosLlaveImg from '../../assets/img/servicios/proyectos-hero.jpeg';
 
 interface Service {
   icon: React.ReactNode;

@@ -15,14 +15,14 @@ import {
 
 // Importar imágenes locales de divisiones
 import imgConstruccionModular from '@/assets/img/divisiones/contruccion modular .jpeg';
-import imgIngenieriaConstructora from '@/assets/img/divisiones/Ingeniería y construcción.png.jpeg';
-import imgGestoria from '@/assets/img/divisiones/Gestoría administrativa, legal y normativa.png.jpeg';
+import imgIngenieriaConstructora from '@/assets/img/divisiones/ingenieria-construccion.jpeg';
+import imgGestoria from '@/assets/img/divisiones/gestoria-administrativa-legal-normativa.jpeg';
 import imgProcesosIndustriales from '@/assets/img/divisiones/procesos industriales.png';
 import imgSeguridadIncendios from '@/assets/img/divisiones/Seguridad contra incendios.png';
 import imgMantenimiento from '@/assets/img/divisiones/Servicios postventa y continuidad operativa.png.jpeg';
-import imgMobiliario from '@/assets/img/divisiones/Diseño y fabricación de mobiliario.png.jpeg';
+import imgMobiliario from '@/assets/img/divisiones/disenno-fabricacion-mobiliario.jpeg';
 import imgComercializadoraLele from '@/assets/img/divisiones/comercializadora lele.png';
-import imgFabricacionMetalica from '@/assets/img/servicios/Fabricación Metálica .jpeg';
+import imgFabricacionMetalica from '@/assets/img/servicios/Fabricacion-Metalica.jpeg';
 
 interface Division {
   icon: React.ReactNode;
