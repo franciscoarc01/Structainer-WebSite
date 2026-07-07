@@ -23,10 +23,10 @@ import colWilbert from "@/assets/img/nosotros/colaboradores/Wilbert.webp"
 import colVictorHugo from "@/assets/img/nosotros/colaboradores/Victor-Hugo.webp"
 import colMauricioGzlez from "@/assets/img/nosotros/colaboradores/Mauricio-Gzlez.webp"
 import colMaDelCarmen from "@/assets/img/nosotros/colaboradores/Ma-Del-Carmen.webp"
-import colSistemas from "@/assets/img/nosotros/colaboradores/ChatGPT-Image-3-jul-2026_04-57-21pm.webp"
+import colSistemas from "@/assets/img/nosotros/colaboradores/Gemini_Generated_Image.png"
+import colAVAID from "@/assets/img/nosotros/colaboradores/Alan-AVAID.webp"
 
 export const Organigrama: React.FC = () => {
-    const containerRef = React.useRef<HTMLDivElement>(null);
     const imgCol = {
         colAlexDel,
         colArturo,
@@ -52,19 +52,13 @@ export const Organigrama: React.FC = () => {
         colVictorHugo,
         colMauricioGzlez,
         colMaDelCarmen,
-        colSistemas
+        colSistemas,
+        colAVAID
     }
-
-    React.useEffect(() => {
-        if (containerRef.current) {
-            containerRef.current.scrollLeft = (containerRef.current.scrollWidth - 0.7 * containerRef.current.scrollWidth) / 2;
-            containerRef.current.scrollIntoView({ behavior: 'smooth' })
-        }
-    }, []);
 
     return (
         <section>
-            <h2 className='text-center pb-[2vmin]'>Organigrama</h2>
+            <h2 className='text-center pb-[2vmin] text-3xl sm:text-4xl md:text-5xl font-black mb-8 md:mb-12 text-gray-900'>ORGANIGRAMA</h2>
             <section className='bg-gray-200 py-[4%]'>
                 <section className='bg-[var(--brand-gold-light)] rounded-lg border-2 border-gray-400 p-[1rem] h-fit w-fit mx-auto relative'>
                     <h2 className="text-[17pt] font-medium text-gray-600 text-center mb-[2vmin] sticky top-10 z-30">Construcción</h2>
@@ -168,6 +162,7 @@ export const Organigrama: React.FC = () => {
                         </section>
                     </section>
                 </section>
+
                 <section className='bg-[var(--brand-gold-light)] rounded-lg border-2 border-gray-400 p-[1rem] h-fit w-fit mx-auto mt-[2rem]'>
                     <h2 className="text-[17pt] font-medium text-gray-600 text-center mb-[2vmin]">Seguridad</h2>
                     <section className='flex flex-row gap-[1rem]'>
@@ -215,6 +210,7 @@ export const Organigrama: React.FC = () => {
                         </div>
                     </section>
                 </section>
+
                 <section className='bg-[var(--brand-gold-light)] rounded-lg border-2 border-gray-400 p-[1rem] h-fit w-[53.7em] mx-auto mt-[2rem]'>
                     <h2 className="text-[17pt] font-medium text-gray-600 text-center mb-[2vmin]">Equipo Administrativo</h2>
                     <section className='grid grid-cols-2 grid-rows-3 gap-[1rem]'>
@@ -284,9 +280,10 @@ export const Organigrama: React.FC = () => {
                         <h2 className="text-[17pt] font-medium text-gray-600 text-center mb-[2vmin]">Sistemas</h2>
                     </div>
                     <div className='flex flex-row items-center gap-[2vmin] w-stretch'>
-                        <div className='bg-[var(--brand-blue-corporate)] rounded-lg border-2 border-gray-400 p-[1rem]'>
+                        <div className='bg-[var(--brand-blue-corporate)] rounded-lg border-2 border-gray-400 p-[1rem] w-full'>
                             <div className='text-center pb-[2vmin] bg-[var(--brand-gray-neutral)] mx-[0.5rem] p-[0.5rem] rounded-sm'>
-                                <h3 className='mx-[0.5rem]'>Ing. Alan</h3>
+                                <img src={imgCol.colAVAID} alt="" className='w-[5rem] block mx-auto rounded-full mb-[5%]' />
+                                <h3 className='mx-[0.5rem]'>Ing. Alan Millote</h3>
                             </div>
                         </div>
                         <div className='bg-[var(--brand-blue-corporate)] rounded-lg border-2 border-gray-400 p-[1rem] w-full'>
