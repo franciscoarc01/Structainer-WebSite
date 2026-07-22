@@ -4,14 +4,12 @@ import colArturo from "@/assets/img/nosotros/colaboradores/Arturo.webp"
 import colEduNava from "@/assets/img/nosotros/colaboradores/Eduardo-Nava.webp"
 import colFlor from "@/assets/img/nosotros/colaboradores/Flor.webp"
 import colHilde from "@/assets/img/nosotros/colaboradores/Hilde.webp"
-import colJesusEst from "@/assets/img/nosotros/colaboradores/Jesus-Estrada.webp"
 import colJulio from "@/assets/img/nosotros/colaboradores/Julio-Cesar.webp"
 import colPaula from "@/assets/img/nosotros/colaboradores/Paula.webp"
 import colMarcoMen from "@/assets/img/nosotros/colaboradores/Marco-Mendoza.webp"
 import colMarioPedroza from "@/assets/img/nosotros/colaboradores/Mario-Pedroza.webp"
 import colJaviSainz from "@/assets/img/nosotros/colaboradores/Javier-Sainz.webp"
 import colGenaro from "@/assets/img/nosotros/colaboradores/Genaro-Herndz.webp"
-import colPaola from "@/assets/img/nosotros/colaboradores/Paola-Herndz.webp"
 import colKaren from "@/assets/img/nosotros/colaboradores/Karen-Fuentes.webp"
 import colRiHernz from "@/assets/img/nosotros/colaboradores/Ricardo-Herndz.webp"
 import colEduLopz from "@/assets/img/nosotros/colaboradores/Eduardo-Lechuga.webp"
@@ -33,14 +31,12 @@ export const Organigrama: React.FC = () => {
         colEduNava,
         colFlor,
         colHilde,
-        colJesusEst,
         colJulio,
         colPaula,
         colMarcoMen,
         colMarioPedroza,
         colJaviSainz,
         colGenaro,
-        colPaola,
         colKaren,
         colRiHernz,
         colEduLopz,
@@ -131,13 +127,9 @@ export const Organigrama: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="h-full bg-[var(--brand-blue-corporate)] rounded-md p-[1rem] w-stretch">
+                                <div className="h-full bg-[var(--brand-blue-corporate)] rounded-md p-[1rem] w-stretch h-stretch">
                                     <h4 className='text-[var(--brand-gold-technical)] text-center mb-[1vmin]'>Supervisores de calidad</h4>
-                                    <div className='text-center py-[2vmin] bg-[var(--brand-gray-neutral)] rounded-sm h-stretch mb-[1rem]'>
-                                        <img src={imgCol.colPaola} alt="" className='w-[5rem] block mx-auto rounded-full mb-[5%]' />
-                                        <h3>Ing. Paola Hernández</h3>
-                                    </div>
-                                    <div className='text-center py-[2vmin] bg-[var(--brand-gray-neutral)] rounded-sm h-stretch'>
+                                    <div className='text-center py-[2vmin] bg-[var(--brand-gray-neutral)] rounded-sm h-[85%]'>
                                         <img src={imgCol.colKaren} alt="" className='w-[5rem] block mx-auto rounded-full mb-[5%]' />
                                         <h3>Lic. Karen L. Fuentes</h3>
                                     </div>
@@ -190,10 +182,6 @@ export const Organigrama: React.FC = () => {
                                 <div className='text-center pb-[2vmin] bg-[var(--brand-gray-neutral)] mx-[0.5rem] p-[0.5rem] rounded-sm mb-[1rem]'>
                                     <img src={imgCol.colMaDelCarmen} alt="" className='w-[5rem] block mx-auto rounded-full mb-[5%]' />
                                     <h3 className='mx-[0.5rem] p-[0.5rem]'>Ing. Maria del Carmen Guzmán</h3>
-                                </div>
-                                <div className='text-center pb-[2vmin] bg-[var(--brand-gray-neutral)] mx-[0.5rem] p-[0.5rem] rounded-sm mb-[1rem]'>
-                                    <img src={imgCol.colJesusEst} alt="" className='w-[5rem] block mx-auto rounded-full mb-[5%]' />
-                                    <h3 className='mx-[0.5rem] p-[0.5rem]'>Ing. Jesús González</h3>
                                 </div>
                                 <div className='text-center pb-[2vmin] bg-[var(--brand-gray-neutral)] mx-[0.5rem] p-[0.5rem] rounded-sm'>
                                     <img src={imgCol.colMauricioGzlez} alt="" className='w-[5rem] block mx-auto rounded-full mb-[5%]' />
